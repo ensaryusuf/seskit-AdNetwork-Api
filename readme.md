@@ -1,0 +1,88 @@
+# Graviton Store's API
+
+Hosted in [top secret :)]
+
+## 📖 Usage:
+
+| Method | Endpoint | Description |
+| ------------- | ------------- | ----- |
+| GET | / | Get API information |
+| GET | /ads/ | Get the whole list of plugin ids |
+| GET | /ads/:adsID | Get plugin info by it's id |
+
+## 🛠️ Development
+
+1. Install all the dependencies
+```sh
+$ npm install
+```
+
+2. Start the project in dev mode. This command will start a development server.
+```sh
+$ npm run dev
+```
+## 🔌 Publishing ads
+1. Fork this repository.
+2. `git clone https://github.com/<YOUR USERNAME>/seskit-ad-api.git`
+3. `cd data`
+4. `mkdir <PLUGIN-NAME>`
+5. `cd <PLUGIN-NAME>`
+6. Create a file called `manifest.yaml`.
+7. In `manifest.yaml` put the following:
+```yaml
+name: <PLUGIN-NAME>
+id: <ID-FOR-PLUGIN>
+author: <YOUR-NAME>
+description: <DESCRIPTION>
+repository: <LINK-TO-PLUGIN-REPO>
+releases:
+ - version: <PLUGIN-VERSION>
+   minTarget: <MINIMUM-GRAVITON-VERSION>
+   target: <GRAVITON-VERSION>
+   url: <LINK-TO-PLUGIN-RELEASE-ZIP>
+```
+##### About the yaml information above
+* `id, repository, url`: __cannot__ contain whitespace
+* `releases` is an array, so you can have multiple releases
+* To create a release for your plugin:
+  1. On your plugin's repository homepage, create a release and upload a `.zip` folder with only functional files for the plugin
+  2. Once the release is published, copy the download-url, and release version of the release and paste into the `url`, `version` fields above respectively.
+* `minTarget` will be the minimum version of Graviton(`X.X.X`)
+* `target` will be a more specific target, you can for example use `2` to target Graviton v2.X.X, or `2.1` for v2.1.X
+8. Commit changes and create PR
+
+## 🎎 Contributing
+#### Before commiting on git
+
+* Get all your linting error (with ESlint)
+```sh
+$ npm run lint
+```
+
+* Fix all your linting error automatically (with ESlint)
+```sh
+$ npm run lint:fix
+```
+
+## 🧦 Tests
+
+To run the tests, run:
+```shell
+$ npm test
+```
+
+## 💾 Production
+
+1. Install all the dependencies
+```sh
+$ npm install
+```
+
+2. Start the project in production mode.
+```sh
+$ npm run start
+```
+
+## Contributors 🤠
+LucasAlt [Github](https://github.com/LucasCtrl)
+David Niederweis [Github](https://github.com/DJN1)
