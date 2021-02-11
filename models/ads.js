@@ -2,12 +2,14 @@ const db = require('../dist/data.json')
 
 // Get all ads
 exports.getAll = () => {
-  return db.list.map(({ name, id, version, description }) => {
+  return db.list.map(({ name, id, button, buttonlink, mp3link, imagelink }) => {
     return {
       name,
       id,
-      version,
-      description,
+      button,
+      buttonlink,
+      mp3link,
+      imagelink,
     }
   })
 }

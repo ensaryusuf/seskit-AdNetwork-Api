@@ -7,7 +7,7 @@ const rimraf = require('rimraf')
 const ads = fs.readdirSync('./data')
 
 let finalData = {
-  graviton: {
+  seskit: {
     devVersion: '2.1.8',
     betaVersion: '2.0.92',
     stableVersion: '0.0.0',
