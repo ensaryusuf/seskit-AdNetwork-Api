@@ -10,6 +10,7 @@ exports.getAll = () => {
       buttonlink,
       mp3link,
       imagelink,
+      yayinci,
     }
   })
 }
