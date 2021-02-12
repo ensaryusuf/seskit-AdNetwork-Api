@@ -1,4 +1,4 @@
-# seskit Store's API
+# seskit Ad Network API
 
 Hosted in [top secret :)]
 
@@ -82,7 +82,3 @@ $ npm install
 ```sh
 $ npm run start
 ```
-
-## Contributors 🤠
-LucasAlt [Github](https://github.com/LucasCtrl)
-David Niederweis [Github](https://github.com/DJN1)
